@@ -60,9 +60,9 @@ src: day01.md#16,17,18
 </v-clicks>
 <v-click>
 
-<Transform scale=0.3>
+<Transform scale=0.75>
 
-![Transistors](https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Transistors.agr.jpg/1200px-Transistors.agr.jpg)
+![Transistors](https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Transbauformen.jpg/500px-Transbauformen.jpg)
 
 </Transform>
 
