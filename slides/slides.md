@@ -18,7 +18,7 @@ info: |
   [Source Code](https://github.com/ObjectOops/icmc/)
 author: Alex Yao
 presenter: true
-browserExporter: dev
+browserExporter: true
 download: ./media/export.pdf
 lineNumbers: true
 remoteAssets: build
@@ -31,7 +31,7 @@ transition: slide-left
 mdc: true
 drawings:
   persist: true
-date: 2025-07-28
+date: 2026-07-20
 timezone: -05:00
 startupLink: https://mybinder.org/v2/gh/ObjectOops/icmc/binder?urlpath=vscode
 githubSnippets: https://github.com/ObjectOops/icmc/blob/main/slides/snippets

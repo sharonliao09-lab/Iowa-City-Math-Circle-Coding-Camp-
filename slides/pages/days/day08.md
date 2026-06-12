@@ -54,7 +54,7 @@ spiral.hideturtle()
 turtle.done()
 ```
 
-<!-- This example requires a GUI. -->
+<!-- This example requires a GUI. Skip this slide unless an instructor has a Replit account and it still supports this kind of code. -->
 
 ---
 routeAlias: lambdas

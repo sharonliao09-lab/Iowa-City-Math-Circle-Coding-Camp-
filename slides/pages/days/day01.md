@@ -45,6 +45,7 @@ Bookmark this slide presentation to following along!
 - [Saving from Binder](media/binder_save.pdf)
 - [Collaborating with Binder](media/binder_collab.pdf)
 
+<!-- Collaborating with Binder is currently broken. Do not follow those instructions. -->
 
 ---
 
@@ -110,7 +111,7 @@ Bookmark this slide presentation to following along!
 - When programming outside of class, here are some other options:
   1. Install an editor + Java and/or Python on a non-Chromebook device.<br>
   <span text-sm>You can ask us for guidance.</span>
-  2. [Replit](https://replit.com/)
+  2. ~~[Replit](https://replit.com/)~~
   3. [JavaFiddle](https://javafiddle.leaningtech.com/) (Java)
   4. [JupyterLite](https://jupyterlite.rtfd.io/en/stable/try/lab) (Python)
 
@@ -120,7 +121,7 @@ Bookmark this slide presentation to following along!
 
 </v-clicks>
 
-<!-- Binder, JavaFiddle, and JupyterLite don't save your files since they don't require an account. -->
+<!-- Binder, JavaFiddle, and JupyterLite don't save your files since they don't require an account. Replit's product audience no longer includes students. -->
 
 ---
 
@@ -214,7 +215,8 @@ hideInToc: true
 - Python 0.9.0 was released in 1991
 - Two variants: Python 2 & Python 3
   - Don't use 2, use 3
-- As of writing this slide, the latest version is **3**.13.5
+- As of writing this slide, the latest version is<br>
+  ~~**3**.13.5 (2025)~~ <carbon-arrow-right /> **3**.14.6 (2026)
 - We will mainly be using Java (it's more straight forward)
   - Python is handy for some things
 
@@ -225,12 +227,17 @@ hideInToc: true
 ::right::
 
 <SlidevVideo autoplay loop controls>
-  <source src="https://www.manim.community/examples/ContinuousMotion.webm" type="video/webm" />
+  <source src="https://www.manim.community/examples/ContinuousMotion.mp4" type="video/mp4" />
   <p>Your browser does not support this video.</p>
 </SlidevVideo>
 
-<SlidevVideo autoplay loop controls>
-  <source src="https://www.manim.community/examples/OpeningManim.webm" type="video/webm" />
+<!-- <SlidevVideo autoplay loop controls>
+  <source src="https://www.manim.community/examples/OpeningManim.mp4" type="video/mp4" />
+  <p>Your browser does not support this video.</p>
+</SlidevVideo> -->
+
+<SlidevVideo controls>
+  <source src="/days/day01/icmc_hkn_trim.mp4" type="video/mp4" />
   <p>Your browser does not support this video.</p>
 </SlidevVideo>
 

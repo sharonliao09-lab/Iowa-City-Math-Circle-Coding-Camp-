@@ -377,14 +377,18 @@ Optionally, demonstrate the janky multiplayer functionality via the preinstalled
 
 [Click here to access the visual guide.](media/binder_collab.pdf)
 
+<!-- Collaborating with Binder is currently broken. Do not follow those instructions. -->
+
 ---
 
-## Replit
+## ~~Replit~~
 
-Create a Replit account at [replit.com](https://replit.com/).
+*Update to this slide: Students best no longer use Replit.*
 
-> Replit gives you 1200 minutes per month of usage. **Use it wisely.**  
-> You also have a limit of 1 collaborator.
+~~Create a Replit account at [replit.com](https://replit.com/).~~
+
+> ~~Replit gives you 1200 minutes per month of usage. **Use it wisely.**~~  
+> ~~You also have a limit of 1 collaborator.~~
 
 <!-- Instructor(s) should assist with Replit account setup. Optionally, demonstrate collaborator functionality. -->
 
@@ -395,7 +399,7 @@ Create a Replit account at [replit.com](https://replit.com/).
 - <Link to="time">Time & Random</Link> - Work with time and generate random numbers
 - <Link to="ansi_escape_sequences">Basic ANSI Escape Sequences</Link> - <span class="colorful">Give your text-based programs colors, <strong>other</strong> <i>styles</i></span>, clear the screen, and move the cursor
 - <Link to="file_io">File I/O</Link> - Read and write to files to store data
-- <Link to="turtle">Turtle</Link> - Use Python to draw colorful spirals
+- ~~<Link to="turtle">Turtle</Link> - Use Python to draw colorful spirals~~
 - <Link to="lambdas">Lambdas / Anonymous Functions</Link> - Assign functions to variables and call variables as functions
 - <Link to="multithreading">Multithreading</Link> - Run multiple functions at the same time
 

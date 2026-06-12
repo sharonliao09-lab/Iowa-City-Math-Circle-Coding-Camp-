@@ -34,7 +34,7 @@ View live [here](https://objectoops.github.io/icmc/).
    - `author` - replace with your name
    - `download` - path to exported presentation PDF
    - `favicon` - favicon
-   - `seaMeta` - SEO
+   - `seoMeta` - SEO
    - `date` - the date of the Monday during which the course will begin
      - The schedule and headers in the presentation will be based off this date
    - `timezone` - timezone of the date above
