@@ -29,7 +29,8 @@ transition: slide-left
 
 <v-clicks depth=3>
 
-- Recursion is when a program repeatedly calls its own method. It includes a base case in which the program immediately breaks out if the condition is true. 
+- Recursion is when a program repeatedly calls its own method. 
+- It includes a base case in which the program immediately breaks out if the condition is true. 
 - Recursion is helpful for several sorting and searching methods, as we will see in the coming slides.
 
 </v-clicks>
@@ -80,7 +81,8 @@ public class Factorial {
 
 <v-clicks depth=3>
 
-- Linear search has a runtime complexity of O(n); the worse case scenario is when the target value is at the end of an array, forcing the program to look through every other value beforehand. 
+- Linear search has a runtime complexity of O(n). 
+- The worse case scenario is when the target value is at the end of an array, forcing the program to look through every other value beforehand. 
 - This makes linear search a very arduous process. But what search can we use instead to optimize runtime complexity?
 
 </v-clicks>
@@ -674,7 +676,7 @@ Optionally, demonstrate the janky multiplayer functionality via the preinstalled
 
 ## ~~Replit~~
 
-*Update to this slide: Students should no longer use Replit.*
+*Update to this slide: Students best no longer use Replit.*
 
 ~~Create a Replit account at [replit.com](https://replit.com/).~~
 
@@ -704,6 +706,6 @@ Optionally, demonstrate the janky multiplayer functionality via the preinstalled
 </style>
 
 <!-- 
-Students should "vote" on which topics they find interesting. Topics do not have to be completed in the suggested order in which this content was designed.
-If a student requests it, the instructor should be prepared to provide an ad hoc example demonstrating the equivalent topic in Python.
+Students should "vote" on which topics they find interesting. Topics do not have to be completed in the suggested order that this content was designed with.
+If a students requests it, the instructor should be prepared to develop an ad hoc example to show demonstrate the equivalent topic in Python.
 -->
