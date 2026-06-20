@@ -186,6 +186,17 @@ public class LinearSearch {
 
 ---
 
+### Sorting Methods 
+
+<v-clicks depth=3>
+
+- Sorting methods are also helpful to find a target value in an array. 
+- There are several sorting methods, but we will go over Selection, Insertion, and Merge Sort.
+
+</v-clicks>
+
+--- 
+
 ### Packages
 
 <v-clicks depth=3>
@@ -204,17 +215,6 @@ public class LinearSearch {
 </v-clicks>
 
 ---
-
-### Sorting Methods 
-
-<v-clicks depth=3>
-
-- Sorting methods are also helpful to find a target value in an array. 
-- There are several sorting methods, but we will go over Selection, Insertion, and Merge Sort.
-
-</v-clicks>
-
---- 
 
 ```java {all|1-3|1-3,12,15,19|5-6|5-6,16|7-8|10|all}
 // We use an `import` statement to import classes from other packages.
