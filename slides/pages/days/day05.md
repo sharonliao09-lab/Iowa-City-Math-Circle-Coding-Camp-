@@ -45,6 +45,20 @@ public class Factorial {
             return 1;
         }
         return n * factorial(n - 1);
+    }
+
+    public static void main (String[] args) {
+        factorial(5);
+        /**
+        factorial(5) = 5 * factorial(4) = 120
+        factorial(4) = 4 * factorial(3) = 24
+        factorial(3) = 3 * factorial(2) = 6
+        factorial(2) = 2 * factorial(1) = 2
+        factorial(1) = 1;
+        **/
+       
+    }
+
 }
 
 ```
