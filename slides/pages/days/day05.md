@@ -22,7 +22,8 @@ transition: slide-left
 
 ::right::
 
-<Toc minDepth=2 maxDepth=3 mode="onlyCurrentTree" />
+<Toc class="text-xl" minDepth=2 maxDepth=3 mode="onlyCurrentTree" />
+--- 
 
 ### Recursion
 
@@ -107,7 +108,7 @@ public class LinearSearch {
 
 <v-clicks depth=3>
 
-- Binary search is where a program repeatedly cuts an array in half to find a target value. It requires a sorted array in increasing value. 
+- Binary search is where a program repeatedly cuts an array in half to find a target value. It requires a **sorted array** in increasing value. 
 - If the target value is less than or greater than one half, we can discard that part until we find the value. 
 
 </v-clicks>
@@ -315,9 +316,6 @@ public static void mergeSort(int[] a, int n) {
 
 ```
 --- 
-
-layout: two-cols-header
----
 
 ### Packages
 
