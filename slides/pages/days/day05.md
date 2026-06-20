@@ -24,7 +24,6 @@ transition: slide-left
 
 <Toc minDepth=2 maxDepth=3 mode="onlyCurrentTree" />
 
---- 
 ### Recursion
 
 <v-clicks depth=3>
@@ -197,66 +196,6 @@ public class LinearSearch {
 
 --- 
 
-### Packages
-
-<v-clicks depth=3>
-
-- Large programs can be split into separate files
-  - Improves organization
-  - **Modularize** code
-    - Use the same classes / functions across multiple projects
-    - Share your code with others
-- Related classes are grouped into **packages**
-  - Only **top-level public** classes in a package can be accessed outside the package
-    - Only one top-level public class per file. Must match file name
-    - This will be clarified later
-  - Classes in other packages can be **imported**
-
-</v-clicks>
-
----
-
-```java {all|1-3|1-3,12,15,19|5-6|5-6,16|7-8|10|all}
-// We use an `import` statement to import classes from other packages.
-import java.util.Scanner; // Importing the `Scanner` class from the `java.util` package.
-import java.util.ArrayList; // Importing the `ArrayList` from the same package.
-
-// This import all of the classes in a package.
-import java.util.*;
-// We do not recommend importing all classes.
-// It can make your code less clear. You may forget which classes you are using.
-
-public class Main { // Top-level public class.
-    public static void main(String[] args) {
-        Scanner scan = new Scanner(System.in);
-        
-        // ...
-        ArrayList<String> arr = new ArrayList<>();
-        LinkedList<String> list = new LinkedList<>();
-        // ...
-        
-        scan.close();
-    }
-}
-
-```
----
-
-### Creating / Using Custom Packages
-
-<StartupBadge />
-
-<v-clicks depth=3>
-
-- In Binder, the `Main` class is already inside a package called `src.workbench`
-  - The file `Main.java` is under the folder `workbench` inside the folder `src`
-  - The name of a package should match the **directory** that the class is in
-    - The directory in this case is `src/workbench/`
-
-</v-clicks>
-
----
-
 ### Selection Sort 
 
 <v-clicks depth=3>
@@ -364,6 +303,66 @@ public static void mergeSort(int[] a, int n) {
 --- 
 
 layout: two-cols-header
+---
+
+### Packages
+
+<v-clicks depth=3>
+
+- Large programs can be split into separate files
+  - Improves organization
+  - **Modularize** code
+    - Use the same classes / functions across multiple projects
+    - Share your code with others
+- Related classes are grouped into **packages**
+  - Only **top-level public** classes in a package can be accessed outside the package
+    - Only one top-level public class per file. Must match file name
+    - This will be clarified later
+  - Classes in other packages can be **imported**
+
+</v-clicks>
+
+---
+
+```java {all|1-3|1-3,12,15,19|5-6|5-6,16|7-8|10|all}
+// We use an `import` statement to import classes from other packages.
+import java.util.Scanner; // Importing the `Scanner` class from the `java.util` package.
+import java.util.ArrayList; // Importing the `ArrayList` from the same package.
+
+// This import all of the classes in a package.
+import java.util.*;
+// We do not recommend importing all classes.
+// It can make your code less clear. You may forget which classes you are using.
+
+public class Main { // Top-level public class.
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        
+        // ...
+        ArrayList<String> arr = new ArrayList<>();
+        LinkedList<String> list = new LinkedList<>();
+        // ...
+        
+        scan.close();
+    }
+}
+
+```
+---
+
+### Creating / Using Custom Packages
+
+<StartupBadge />
+
+<v-clicks depth=3>
+
+- In Binder, the `Main` class is already inside a package called `src.workbench`
+  - The file `Main.java` is under the folder `workbench` inside the folder `src`
+  - The name of a package should match the **directory** that the class is in
+    - The directory in this case is `src/workbench/`
+
+</v-clicks>
+
 ---
 
 #### Example 1 - Java <logos-java />
