@@ -674,7 +674,7 @@ Optionally, demonstrate the janky multiplayer functionality via the preinstalled
 
 ## ~~Replit~~
 
-*Update to this slide: Students best no longer use Replit.*
+*Update to this slide: Students should no longer use Replit.*
 
 ~~Create a Replit account at [replit.com](https://replit.com/).~~
 
@@ -704,6 +704,6 @@ Optionally, demonstrate the janky multiplayer functionality via the preinstalled
 </style>
 
 <!-- 
-Students should "vote" on which topics they find interesting. Topics do not have to be completed in the suggested order that this content was designed with.
-If a students requests it, the instructor should be prepared to develop an ad hoc example to show demonstrate the equivalent topic in Python.
+Students should "vote" on which topics they find interesting. Topics do not have to be completed in the suggested order in which this content was designed.
+If a student requests it, the instructor should be prepared to provide an ad hoc example demonstrating the equivalent topic in Python.
 -->
