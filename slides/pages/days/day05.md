@@ -11,10 +11,9 @@ transition: slide-left
 
 - Recursion
 - Sorting Methods 
-- Imports / Packages
 - *Break*
+- Imports / Packages
 - Exception Handling
-- *No worksheet today*
 - Projects Overview
 - Saving progress from Binder
 - Replit
@@ -22,10 +21,14 @@ transition: slide-left
 
 ::right::
 
-<Toc class="text-xl" minDepth=2 maxDepth=3 mode="onlyCurrentTree" />
+<Toc class="text-x" minDepth=2 maxDepth=3 mode="onlyCurrentTree" />
 --- 
 
-### Recursion
+## Recursion
+
+<StartupBadge />
+
+<br>
 
 <v-clicks depth=3>
 
@@ -66,7 +69,11 @@ public class Factorial {
 ```
 ---
 
-### Searching Methods 
+## Searching Methods 
+
+<br>
+<br>
+<br>
 
 <v-clicks depth=3>
 
@@ -77,12 +84,15 @@ public class Factorial {
 
 ---
 
-## Linear Search
+### Linear Search
+
+<br>
+<br>
 
 <v-clicks depth=3>
 
 - Linear search has a runtime complexity of O(n). 
-- The worse case scenario is when the target value is at the end of an array, forcing the program to look through every other value beforehand. 
+- The worst-case scenario is when the target value is at the end of an array, forcing the program to look through every other value beforehand. 
 - This makes linear search a very arduous process. But what search can we use instead to optimize runtime complexity?
 
 </v-clicks>
@@ -108,10 +118,13 @@ public class LinearSearch {
 
 ### Binary Search 
 
+<br>
+<br>
+
 <v-clicks depth=3>
 
 - Binary search is where a program repeatedly cuts an array in half to find a target value. It requires a **sorted array** in increasing value. 
-- If the target value is less than or greater than one half, we can discard that part until we find the value. 
+- If the target value is less than or greater than one-half, we can discard that part until we find the value. 
 
 </v-clicks>
 
@@ -192,6 +205,9 @@ public class LinearSearch {
 
 ### Runtime Complexity 
 
+<br>
+<br>
+
 <v-clicks depth=3>
 
 - Binary Search has a runtime complexity of O(log n), making the search time grow logarithmically with the data size. 
@@ -202,7 +218,10 @@ public class LinearSearch {
 
 ---
 
-### Sorting Methods 
+## Sorting Methods 
+
+<br>
+<br>
 
 <v-clicks depth=3>
 
@@ -215,9 +234,12 @@ public class LinearSearch {
 
 ### Selection Sort 
 
+<br>
+<br>
+
 <v-clicks depth=3>
 
-- Selection Sort is a searching algorithm, where the program repeatedly finds the smallest element in the array and adds it to the front. 
+- Selection Sort is a searching algorithm, where the program repeatedly finds the smallest element in the array and adds it to the front, swapping it with the element previously at its place. 
 - The runtime complexity of Selection Sort is O(n2), which makes it a bit slower than other sorting methods, such as Merge Sort. 
 
 </v-clicks>
@@ -249,9 +271,12 @@ public static void sortAscending(final int[] arr) {
 
 ### Insertion Sort 
 
+<br>
+<br>
+
 <v-clicks depth=3>
 
-- Insertion Sort compares two adjacent values and swaps the two positions if the second element is smaller than the first. 
+- Insertion Sort inserts each element of an array into its correct position. 
 - The best runtime complexity of Insertion Sort is O(n) if the array is already sorted.
 - The average and worst case is O(n2) if the array is randomly or reversed ordered. 
 
@@ -282,6 +307,9 @@ public static void  insertionSort(int arr[], int n)
 ---
 
 ### Merge Sort 
+
+<br>
+<br>
 
 <v-clicks depth=3>
 
@@ -318,10 +346,18 @@ public static void mergeSort(int[] a, int n) {
 
 ```
 --- 
+## Break
 
-### Packages
+Have a break!
+
+<RandomPicture />
+
+--- 
+
+## Packages
 
 <v-clicks depth=3>
+<br>
 
 - Large programs can be split into separate files
   - Improves organization
@@ -507,17 +543,11 @@ cowsay.cow("MOO") # Call a function from the package.
 
 ---
 
-## Break
-
-Have a break!
-
-<RandomPicture />
-
----
-
 ## Exceptions
 
 <v-clicks depth=2>
+
+<br>
 
 - An **exception** is a type of event that disrupts the execution of a program
 - **Exceptions** are often used to indicate that a problem occurred in the program  
@@ -566,9 +596,11 @@ public class Main {
 
 ---
 
-## Handling Exceptions
+### Handling Exceptions
 
 <v-clicks>
+
+<br>
 
 - By *handling* an exception, you are instructing the program to do something else instead of *terminating*
 - Put the code that can throw exception(s) inside a `try` block
@@ -621,13 +653,17 @@ public class Main {
 
 ## Worksheet
 
-No worksheet today!
+[Click here to access the worksheet.](worksheets/worksheet05/worksheet05.pdf)
+
+[Click here to access the answer key.](worksheets/worksheet05/answers05.pdf)
 
 <!-- There is another slide after this one! -->
 
 ---
 
 ## Projects
+
+<br>
 
 - The next week of content will cover niche topics
 - There will be no more worksheets
