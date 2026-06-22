@@ -45,9 +45,8 @@ transition: slide-left
 
 ### Factorial Recursive Method
 
-```java {all|1-3|1-3,12,15,19|5-6|5-6,16|7-8|10|all}
-
-public class Factorial {
+```java {monaco-run} {autorun:false}
+class Main {
     public static int factorial(int n) {
         if (n <= 1) {
             return 1;
@@ -56,7 +55,7 @@ public class Factorial {
     }
 
     public static void main (String[] args) {
-        factorial(5);
+        System.out.println(factorial(5));
         /**
         factorial(5) = 5 * factorial(4) = 120
         factorial(4) = 4 * factorial(3) = 24
@@ -64,11 +63,8 @@ public class Factorial {
         factorial(2) = 2 * factorial(1) = 2
         factorial(1) = 1;
         **/
-       
     }
-
 }
-
 ```
 
 ---
@@ -93,120 +89,102 @@ public class Factorial {
 <v-clicks>
 
 - Linear search has a runtime complexity of $O(n)$. 
-- The worst-case scenario is when the target value is at the end of an array, forcing the program to look through every other value beforehand. 
+- The worse case scenario is when the target value is at the end of an array, forcing the program to look through every other value beforehand. 
 - This makes linear search a very arduous process. But what search can we use instead to optimize runtime complexity?
 
 </v-clicks>
 
 ---
 
-```java {all|1-3|1-3,12,15,19|5-6|5-6,16|7-8|10|all}
-
+```java {monaco-run} {autorun:false}
 //GeeksForGeeks
-public class LinearSearch {
-
-  	static int search(int a[], int n, int x)
-    {
+class Main {
+  	public static int search(int a[], int n, int x) {
         for (int i = 0; i < n; i++) {
             if (a[i] == x)
                 return i;
         }
-
         return -1;
     }
+
+    public static void main (String[] args) {
+        int[] arr = {5, 19, 2, 14, 20};
+        System.out.println(search(arr, 5, 20));
+    }
+}
 ```
 
 ---
 
-### Binary Search 
+### Binary Search
 
 <br>
 
 <v-clicks>
 
 - Binary search is where a program repeatedly cuts an array in half to find a target value. It requires a **sorted array** in increasing value. 
-- If the target value is less than or greater than one-half, we can discard that part until we find the value. 
+- If the target value is less than or greater than one half, we can discard that part until we find the value. 
 
 </v-clicks>
 
 ---
-
-<Transform scale=0.8>
-
-```java {all|1-3|1-3,12,15,19|5-6|5-6,16|7-8|10|all}
-
-//CodeHS
- public class BinarySearch {
-    public static int binarySearch(int[] numbers, int target) {
-        int begin = 0;
-        int end = numbers.length - 1;
-        int counter = 0;
-
-        while (begin <= end) 
-        {
-            counter++;
-            // Find mid-point
-            int mid = (begin + end) / 2;
-            int current = numbers[mid];
-
-            // Test mid-point
-            if (target == current) 
-            {
-                System.out.println("Binary Search Steps: " + counter);
-                return mid;
-            }
-            // Too high
-            else if (target < current) 
-            {
-                end = mid - 1;
-            }
-            // Too low
-            else 
-            {
-                begin = mid + 1;
-            }
-        }
-        return -1; // Not found
-    }
- }
-
-```
-
-</Transform>
-
+layout: default
 ---
 
-### Recursive Binary Search
+<div class="grid grid-cols-[58%_38%] gap-5 text-[0.74rem]">
 
-```java {all|1-3|1-3,12,15,19|5-6|5-6,16|7-8|10|all}
+<div>
 
-//GeeksForGeeks
- int binarySearch(int arr[], int l, int r, int x) {
-    if (r >= l && l <= arr.length - 1) {
-
-        int mid = l + (r - l) / 2;
-
-        // If the element is present
-        // at the middle itself
-        if (arr[mid] == x)
-            return mid;
-
-        // If element is smaller than mid, then it can
-        // only be present in left subarray
-        if (arr[mid] > x)
-            return binarySearch(arr, l, mid - 1, x);
-
-        // Else the element can only be present
-        // in right subarray
-        return binarySearch(arr, mid + 1, r, x);
+```java
+class Main {
+    public static int binarySearch(int[] numbers, int target) {
+        int begin = 0, end = numbers.length - 1, counter = 0;
+        while (begin <= end) {
+            counter++;
+            int mid = (begin + end) / 2;
+            if (target == numbers[mid]) {
+                System.out.println("Steps: " + counter);
+                return mid;
+            }
+            if (target < numbers[mid]) end = mid - 1;
+            else begin = mid + 1;
+        }
+        return -1;
     }
+}
+```
 
-    // We reach here when element is not present in
-    // array
-    return -1;
+</div>
+
+<div>
+
+```java {monaco-run} {autorun:false}
+class Main {
+    public static void main(String[] args) {
+        int[] arr = {2, 5, 14, 19, 20};
+        int target = 20;
+        
+        System.out.println("Searching for: " + target);
+        System.out.println("Found at index: " + Helper.binarySearch(arr, target));
+    }
 }
 
+class Helper {
+    public static int binarySearch(int[] n, int t) {
+        int b = 0, e = n.length - 1;
+        while (b <= e) {
+            int m = (b + e) / 2;
+            if (t == n[m]) return m;
+            if (t < n[m]) e = m - 1; else b = m + 1;
+        }
+        return -1;
+    }
+}
 ```
+
+</div>
+
+</div>
 
 ---
 
@@ -250,26 +228,31 @@ public class LinearSearch {
 
 ---
 
-```java {all|1-3|1-3,12,15,19|5-6|5-6,16|7-8|10|all}
-
+```java {monaco-run} {autorun:false}
 //Baeldung
-public static void sortAscending(final int[] arr) {
-    for (int i = 0; i < arr.length - 1; i++) {
-        int minElementIndex = i;
-        for (int j = i + 1; j < arr.length; j++) {
-            if (arr[minElementIndex] > arr[j]) {
-                minElementIndex = j;
+class Main {
+    public static void sortAscending(int[] arr) {
+        for (int i = 0; i < arr.length - 1; i++) {
+            int minElementIndex = i;
+            for (int j = i + 1; j < arr.length; j++) {
+                if (arr[minElementIndex] > arr[j]) {
+                    minElementIndex = j;
+                }
+            }
+
+            if (minElementIndex != i) {
+                int temp = arr[i];
+                arr[i] = arr[minElementIndex];
+                arr[minElementIndex] = temp;
             }
         }
-
-        if (minElementIndex != i) {
-            int temp = arr[i];
-            arr[i] = arr[minElementIndex];
-            arr[minElementIndex] = temp;
-        }
+    }
+    public static void main (String[] args) {
+        int[] arr = {15, 11, 22, 35, 16};
+        sortAscending(arr);
+        System.out.println(java.util.Arrays.toString(arr));
     }
 }
-
 ```
 
 ---
@@ -288,25 +271,28 @@ public static void sortAscending(final int[] arr) {
 
 ---
 
-```java {all|1-3|1-3,12,15,19|5-6|5-6,16|7-8|10|all}
+```java {monaco-run} {autorun:false}
+class Main {
+    public static void insertionSort(int arr[], int n)
+    {
+        for (int i = 1; i < n; ++i) {
+            int key = arr[i];
+            int j = i - 1;
 
-public static void  insertionSort(int arr[], int n)
-{
-    for (int i = 1; i < n; ++i) {
-        int key = arr[i];
-        int j = i - 1;
-
-        /* Move elements of arr[0..i-1], that are
-           greater than key, to one position ahead
-           of their current position */
-        while (j >= 0 && arr[j] > key) {
-            arr[j + 1] = arr[j];
-            j = j - 1;
+            while (j >= 0 && arr[j] > key) {
+                arr[j + 1] = arr[j];
+                j = j - 1;
+            }
+            arr[j + 1] = key;
         }
-        arr[j + 1] = key;
+    }
+
+    public static void main (String[] args) {
+        int[] arr = {15, 11, 22, 35, 16};
+        insertionSort(arr, 5);
+        System.out.println(java.util.Arrays.toString(arr)); 
     }
 }
-
 ```
 
 ---
@@ -324,31 +310,60 @@ public static void  insertionSort(int arr[], int n)
 </v-clicks>
 
 ---
+layout: default
+---
 
-```java {all|1-3|1-3,12,15,19|5-6|5-6,16|7-8|10|all}
+<div class="grid grid-cols-[55%_40%] gap-6 text-[0.70rem] line-height-[1.15]">
 
-//Baeldung
-public static void mergeSort(int[] a, int n) {
-    if (n < 2) {
-        return;
+<div>
+
+```java
+class Main {
+    public static void mergeSort(int[] a, int n) {
+        if (n < 2) return;
+        int mid = n / 2;
+        int[] left = new int[mid];
+        int[] right = new int[n - mid];
+
+        for (int i = 0; i < mid; i++) left[i] = a[i];
+        for (int i = mid; i < n; i++) right[i - mid] = a[i];
+        
+        mergeSort(left, mid);
+        mergeSort(right, n - mid);
+        merge(a, left, right, mid, n - mid);
     }
-    int mid = n / 2;
-    int[] left = new int[mid];
-    int[] right = new int[n - mid];
 
-    for (int i = 0; i < mid; i++) {
-        left[i] = a[i];
+    public static void merge(int[] a, int[] left, int[] right, int leftLength, int rightLength) {
+        int i = 0, j = 0, k = 0;
+        while (i < leftLength && j < rightLength) {
+            if (left[i] <= right[j]) a[k++] = left[i++];
+            else a[k++] = right[j++];
+        }
+        while (i < leftLength) a[k++] = left[i++];
+        while (j < rightLength) a[k++] = right[j++];
     }
-    for (int i = mid; i < n; i++) {
-        right[i - mid] = a[i];
-    }
-    mergeSort(left, mid);
-    mergeSort(right, n - mid);
-
-    merge(a, left, right, mid, n - mid);
 }
-
 ```
+
+</div>
+
+<div>
+
+```java {monaco-run} {autorun:false}
+class Main {
+    public static void main(String[] args) {
+        int[] arr = {15, 11, 22, 35, 16};
+        mergeSort(arr, 5);
+        System.out.println(java.util.Arrays.toString(arr));
+    }
+
+    public static void mergeSort(int[] a, int n) {}
+}
+```
+
+</div>
+
+</div>
 
 --- 
 
