@@ -21,26 +21,29 @@ transition: slide-left
 
 ::right::
 
-<Toc class="text-x" minDepth=2 maxDepth=3 mode="onlyCurrentTree" />
---- 
+<Transform scale=0.65>
+
+<Toc minDepth=2 maxDepth=3 mode="onlyCurrentTree" />
+
+</Transform>
+
+---
 
 ## Recursion
 
-<StartupBadge />
-
 <br>
 
-<v-clicks depth=3>
+<v-clicks>
 
-- Recursion is when a program repeatedly calls its own method. 
-- It includes a base case in which the program immediately breaks out if the condition is true. 
+- Recursion is when a program repeatedly calls its own method.
+- It includes a base case in which the program immediately breaks out if the condition is true.
 - Recursion is helpful for several sorting and searching methods, as we will see in the coming slides.
 
 </v-clicks>
 
 ---
 
-### Factorial Recursive Method 
+### Factorial Recursive Method
 
 ```java {all|1-3|1-3,12,15,19|5-6|5-6,16|7-8|10|all}
 
@@ -67,15 +70,14 @@ public class Factorial {
 }
 
 ```
+
 ---
 
 ## Searching Methods 
 
 <br>
-<br>
-<br>
 
-<v-clicks depth=3>
+<v-clicks>
 
 - Searching methods, such as linear and binary search, are useful when finding a target value in an array. 
 - However, these two methods are vastly different in their runtimes and efficiency. 
@@ -87,11 +89,10 @@ public class Factorial {
 ### Linear Search
 
 <br>
-<br>
 
-<v-clicks depth=3>
+<v-clicks>
 
-- Linear search has a runtime complexity of O(n). 
+- Linear search has a runtime complexity of $O(n)$. 
 - The worst-case scenario is when the target value is at the end of an array, forcing the program to look through every other value beforehand. 
 - This makes linear search a very arduous process. But what search can we use instead to optimize runtime complexity?
 
@@ -113,15 +114,15 @@ public class LinearSearch {
 
         return -1;
     }
-``` 
+```
+
 ---
 
 ### Binary Search 
 
 <br>
-<br>
 
-<v-clicks depth=3>
+<v-clicks>
 
 - Binary search is where a program repeatedly cuts an array in half to find a target value. It requires a **sorted array** in increasing value. 
 - If the target value is less than or greater than one-half, we can discard that part until we find the value. 
@@ -129,6 +130,8 @@ public class LinearSearch {
 </v-clicks>
 
 ---
+
+<Transform scale=0.8>
 
 ```java {all|1-3|1-3,12,15,19|5-6|5-6,16|7-8|10|all}
 
@@ -168,6 +171,9 @@ public class LinearSearch {
  }
 
 ```
+
+</Transform>
+
 ---
 
 ### Recursive Binary Search
@@ -201,16 +207,16 @@ public class LinearSearch {
 }
 
 ```
+
 ---
 
 ### Runtime Complexity 
 
 <br>
-<br>
 
-<v-clicks depth=3>
+<v-clicks>
 
-- Binary Search has a runtime complexity of O(log n), making the search time grow logarithmically with the data size. 
+- Binary Search has a runtime complexity of $O(\log(n))$, making the search time grow logarithmically with the data size.
 - Because of this, binary search is significantly faster than linear search.
 - However, if a program contains a small, unsorted array, linear search may be a better option.
 
@@ -221,26 +227,24 @@ public class LinearSearch {
 ## Sorting Methods 
 
 <br>
-<br>
 
-<v-clicks depth=3>
+<v-clicks>
 
 - Sorting methods are also helpful to find a target value in an array. 
 - There are several sorting methods, but we will go over Selection, Insertion, and Merge Sort.
 
 </v-clicks>
 
---- 
+---
 
-### Selection Sort 
+### Selection Sort
 
 <br>
-<br>
 
-<v-clicks depth=3>
+<v-clicks>
 
-- Selection Sort is a searching algorithm, where the program repeatedly finds the smallest element in the array and adds it to the front, swapping it with the element previously at its place. 
-- The runtime complexity of Selection Sort is O(n2), which makes it a bit slower than other sorting methods, such as Merge Sort. 
+- Selection Sort is a searching algorithm, where the program repeatedly finds the smallest element in the array and adds it to the front, swapping it with the element previously at its place.
+- The runtime complexity of Selection Sort is $O(n^2)$, which makes it a bit slower than other sorting methods, such as Merge Sort.
 
 </v-clicks>
 
@@ -267,18 +271,18 @@ public static void sortAscending(final int[] arr) {
 }
 
 ```
+
 ---
 
 ### Insertion Sort 
 
 <br>
-<br>
 
-<v-clicks depth=3>
+<v-clicks>
 
-- Insertion Sort inserts each element of an array into its correct position. 
-- The best runtime complexity of Insertion Sort is O(n) if the array is already sorted.
-- The average and worst case is O(n2) if the array is randomly or reversed ordered. 
+- Insertion Sort inserts each element of an array into its correct position.
+- The best runtime complexity of Insertion Sort is $O(n)$ if the array is already sorted.
+- The average and worst case is $O(n^2)$ if the array is randomly or reversed ordered.
 
 </v-clicks>
 
@@ -304,18 +308,18 @@ public static void  insertionSort(int arr[], int n)
 }
 
 ```
+
 ---
 
 ### Merge Sort 
 
 <br>
-<br>
 
-<v-clicks depth=3>
+<v-clicks>
 
 - Merge Sort, or the "divide and conquer" method, recursively divides an input array into two halves before recursively sorting them and merging them back together to obtain the final array.
-- The best runtime complexity of Merge Sort is O(n log n) when the array is sorted or nearly sorted. 
-- The average and worst case is also O(n logn) when the array is randomly or reverse ordered. 
+- The best runtime complexity of Merge Sort is $O(n\log(n))$ when the array is sorted or nearly sorted.
+- The average and worst case is also $O(n\log(n))$ when the array is randomly or reverse ordered.
 
 </v-clicks>
 
@@ -345,7 +349,9 @@ public static void mergeSort(int[] a, int n) {
 }
 
 ```
+
 --- 
+
 ## Break
 
 Have a break!
@@ -356,8 +362,9 @@ Have a break!
 
 ## Packages
 
-<v-clicks depth=3>
 <br>
+
+<v-clicks depth=3>
 
 - Large programs can be split into separate files
   - Improves organization
@@ -396,8 +403,8 @@ public class Main { // Top-level public class.
         scan.close();
     }
 }
-
 ```
+
 ---
 
 ### Creating / Using Custom Packages
@@ -413,6 +420,8 @@ public class Main { // Top-level public class.
 
 </v-clicks>
 
+---
+layout: two-cols-header
 ---
 
 #### Example 1 - Java <logos-java />
@@ -545,9 +554,9 @@ cowsay.cow("MOO") # Call a function from the package.
 
 ## Exceptions
 
-<v-clicks depth=2>
-
 <br>
+
+<v-clicks depth=2>
 
 - An **exception** is a type of event that disrupts the execution of a program
 - **Exceptions** are often used to indicate that a problem occurred in the program  
@@ -598,9 +607,9 @@ public class Main {
 
 ### Handling Exceptions
 
-<v-clicks>
-
 <br>
+
+<v-clicks>
 
 - By *handling* an exception, you are instructing the program to do something else instead of *terminating*
 - Put the code that can throw exception(s) inside a `try` block
