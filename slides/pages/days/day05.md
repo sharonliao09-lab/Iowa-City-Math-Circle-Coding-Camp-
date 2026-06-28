@@ -323,60 +323,47 @@ class Main {
 layout: default
 ---
 
-<div class="grid grid-cols-[55%_40%] gap-6 text-[0.70rem] line-height-[1.15]">
+```java {monaco-run} {autorun:false}
 
-<div>
-
-```java
-class Main { 
-    public static void mergeSort(int[] a, int n) { 
-        if (n < 2) return; 
-        int mid = n / 2; 
-        int[] left = new int[mid]; 
-        int[] right = new int[n - mid]; 
-
-        for (int i = 0; i < mid; i++) left[i] = a[i]; 
-        for (int i = mid; i < n; i++) right[i - mid] = a[i]; 
-        
-        mergeSort(left, mid); 
-        mergeSort(right, n - mid); 
-        merge(a, left, right, mid, n - mid); 
+class Main {
+    public static void main (String[] args) {
+        int[] arr = {15, 11, 22, 35, 16};
+        mergeSort(arr, 5);
+        System.out.println(java.util.Arrays.toString(arr));
     } 
-
+    public static void mergeSort(int[] a, int n) {
+        if (n < 2) return;
+        int mid = n / 2;
+        int[] left = new int[mid]; 
+        int[] right = new int[n - mid];
+        for (int i = 0; i < mid; i++) left[i] = a[i];
+        for (int i = mid; i < n; i++) right[i - mid] = a[i];
+        mergeSort(left, mid);
+        mergeSort(right, n - mid);
+        merge(a, left, right, mid, n - mid);
+    }
     public static void merge(int[] a, int[] left, int[] right, int leftLength, int rightLength) {
         int i = 0, j = 0, k = 0;
         while (i < leftLength && j < rightLength) {
-            if (left[i] <= right[j]) a[k++] = left[i++];
+            if (left[i] <= right[j]) a[k++] = left[i++]; 
             else a[k++] = right[j++];
-        }
+        } 
         while (i < leftLength) a[k++] = left[i++];
-        while (j < rightLength) a[k++] = right[j++];
-    }
-}
+        while (j < rightLength) a[k++] = right[j++]; } }
+
 ```
 
-</div>
+---
 
-<div>
+## Bar Graph Visualization
 
-```java {monaco-run} {autorun:false}
-class Main {
-    public static void main (String[] args) { 
-        int[] arr = {15, 11, 22, 35, 16}; 
-        mergeSort(arr, 5); 
-        System.out.println(java.util.Arrays.toString(arr)); 
-    } 
+[![Selection Sort](https://youtu.be/92BfuxHn2XE?si=bugWMqPeydWaSPu3)](https://youtu.be/92BfuxHn2XE?si=bugWMqPeydWaSPu3)
+[![Insertion Sort](https://youtu.be/8oJS1BMKE64?si=3p2svD_zVKcrUqab
+)](https://youtu.be/8oJS1BMKE64?si=3p2svD_zVKcrUqab
+)
+[![Merge Sort](https://youtu.be/ZRPoEKHXTJg?si=QUbawooci1iltnMy)](https://youtu.be/ZRPoEKHXTJg?si=QUbawooci1iltnMy)
 
-    public static void mergeSort(int[] a, int n) {}
-}
-```
-
-
-</div>
-
-</div>
-
---- 
+---
 
 ## Break
 
