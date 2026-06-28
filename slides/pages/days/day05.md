@@ -21,31 +21,29 @@ transition: slide-left
 
 ::right::
 
-<Transform scale=0.65>
-
-<Toc minDepth=2 maxDepth=3 mode="onlyCurrentTree" />
-
-</Transform>
-
----
+<Toc class="text-x" minDepth=2 maxDepth=3 mode="onlyCurrentTree" />
+--- 
 
 ## Recursion
 
+<StartupBadge />
+
 <br>
 
-<v-clicks>
+<v-clicks depth=3>
 
-- Recursion is when a program repeatedly calls its own method.
-- It includes a base case in which the program immediately breaks out if the condition is true.
+- Recursion is when a program repeatedly calls its own method. 
+- It includes a base case in which the program immediately breaks out if the condition is true. 
 - Recursion is helpful for several sorting and searching methods, as we will see in the coming slides.
 
 </v-clicks>
 
 ---
 
-### Factorial Recursive Method
+### Factorial Recursive Method 
 
 ```java {monaco-run} {autorun:false}
+
 class Main {
     public static int factorial(int n) {
         if (n <= 1) {
@@ -62,18 +60,20 @@ class Main {
         factorial(3) = 3 * factorial(2) = 6
         factorial(2) = 2 * factorial(1) = 2
         factorial(1) = 1;
-        **/
+        **/    
     }
 }
-```
 
+```
 ---
 
 ## Searching Methods 
 
 <br>
+<br>
+<br>
 
-<v-clicks>
+<v-clicks depth=3>
 
 - Searching methods, such as linear and binary search, are useful when finding a target value in an array. 
 - However, these two methods are vastly different in their runtimes and efficiency. 
@@ -85,10 +85,11 @@ class Main {
 ### Linear Search
 
 <br>
+<br>
 
-<v-clicks>
+<v-clicks depth=3>
 
-- Linear search has a runtime complexity of $O(n)$. 
+- Linear search has a runtime complexity of O(n). 
 - The worse case scenario is when the target value is at the end of an array, forcing the program to look through every other value beforehand. 
 - This makes linear search a very arduous process. But what search can we use instead to optimize runtime complexity?
 
@@ -97,9 +98,12 @@ class Main {
 ---
 
 ```java {monaco-run} {autorun:false}
+
 //GeeksForGeeks
 class Main {
-  	public static int search(int a[], int n, int x) {
+
+  	public static int search(int a[], int n, int x)
+    {
         for (int i = 0; i < n; i++) {
             if (a[i] == x)
                 return i;
@@ -112,15 +116,15 @@ class Main {
         System.out.println(search(arr, 5, 20));
     }
 }
-```
-
+``` 
 ---
 
-### Binary Search
+### Binary Search 
 
 <br>
+<br>
 
-<v-clicks>
+<v-clicks depth=3>
 
 - Binary search is where a program repeatedly cuts an array in half to find a target value. It requires a **sorted array** in increasing value. 
 - If the target value is less than or greater than one half, we can discard that part until we find the value. 
@@ -135,21 +139,21 @@ layout: default
 
 <div>
 
-```java
-class Main {
-    public static int binarySearch(int[] numbers, int target) {
-        int begin = 0, end = numbers.length - 1, counter = 0;
-        while (begin <= end) {
-            counter++;
-            int mid = (begin + end) / 2;
-            if (target == numbers[mid]) {
-                System.out.println("Steps: " + counter);
-                return mid;
-            }
-            if (target < numbers[mid]) end = mid - 1;
-            else begin = mid + 1;
-        }
-        return -1;
+```java {monaco-run} {autorun:false}
+class Main { 
+    public static int binarySearch(int[] numbers, int target) { 
+        int begin = 0, end = numbers.length - 1, counter = 0; 
+        while (begin <= end) { 
+            counter++; 
+            int mid = (begin + end) / 2; 
+            if (target == numbers[mid]) { 
+                System.out.println("Steps: " + counter); 
+                return mid; 
+            } 
+            if (target < numbers[mid]) end = mid - 1; 
+            else begin = mid + 1; 
+        } 
+        return -1; 
     }
 }
 ```
@@ -160,13 +164,13 @@ class Main {
 
 ```java {monaco-run} {autorun:false}
 class Main {
-    public static void main(String[] args) {
-        int[] arr = {2, 5, 14, 19, 20};
+    public static void main (String[] args) { 
+        int[] arr = {2, 5, 14, 19, 20}; 
         int target = 20;
         
         System.out.println("Searching for: " + target);
-        System.out.println("Found at index: " + Helper.binarySearch(arr, target));
-    }
+        System.out.println("Found at index: " + Helper.binarySearch(arr, target)); 
+    } 
 }
 
 class Helper {
@@ -183,7 +187,6 @@ class Helper {
 ```
 
 </div>
-
 </div>
 
 ---
@@ -191,10 +194,11 @@ class Helper {
 ### Runtime Complexity 
 
 <br>
+<br>
 
-<v-clicks>
+<v-clicks depth=3>
 
-- Binary Search has a runtime complexity of $O(\log(n))$, making the search time grow logarithmically with the data size.
+- Binary Search has a runtime complexity of O(log n), making the search time grow logarithmically with the data size. 
 - Because of this, binary search is significantly faster than linear search.
 - However, if a program contains a small, unsorted array, linear search may be a better option.
 
@@ -205,30 +209,33 @@ class Helper {
 ## Sorting Methods 
 
 <br>
+<br>
 
-<v-clicks>
+<v-clicks depth=3>
 
 - Sorting methods are also helpful to find a target value in an array. 
 - There are several sorting methods, but we will go over Selection, Insertion, and Merge Sort.
 
 </v-clicks>
 
----
+--- 
 
-### Selection Sort
+### Selection Sort 
 
 <br>
+<br>
 
-<v-clicks>
+<v-clicks depth=3>
 
-- Selection Sort is a searching algorithm, where the program repeatedly finds the smallest element in the array and adds it to the front, swapping it with the element previously at its place.
-- The runtime complexity of Selection Sort is $O(n^2)$, which makes it a bit slower than other sorting methods, such as Merge Sort.
+- Selection Sort is a searching algorithm, where the program repeatedly finds the smallest element in the array and adds it to the front, swapping it with the element previously at its place. 
+- The runtime complexity of Selection Sort is O(n2), which makes it a bit slower than other sorting methods, such as Merge Sort. 
 
 </v-clicks>
 
 ---
 
 ```java {monaco-run} {autorun:false}
+
 //Baeldung
 class Main {
     public static void sortAscending(int[] arr) {
@@ -250,22 +257,23 @@ class Main {
     public static void main (String[] args) {
         int[] arr = {15, 11, 22, 35, 16};
         sortAscending(arr);
-        System.out.println(java.util.Arrays.toString(arr));
+        System.out.println(java.util.Arrays.toString(arr)); 
+        
     }
 }
 ```
-
 ---
 
 ### Insertion Sort 
 
 <br>
+<br>
 
-<v-clicks>
+<v-clicks depth=3>
 
-- Insertion Sort inserts each element of an array into its correct position.
-- The best runtime complexity of Insertion Sort is $O(n)$ if the array is already sorted.
-- The average and worst case is $O(n^2)$ if the array is randomly or reversed ordered.
+- Insertion Sort inserts each element of an array into its correct position. 
+- The best runtime complexity of Insertion Sort is O(n) if the array is already sorted.
+- The average and worst case is O(n2) if the array is randomly or reversed ordered. 
 
 </v-clicks>
 
@@ -293,19 +301,21 @@ class Main {
         System.out.println(java.util.Arrays.toString(arr)); 
     }
 }
-```
 
+
+```
 ---
 
 ### Merge Sort 
 
 <br>
+<br>
 
-<v-clicks>
+<v-clicks depth=3>
 
 - Merge Sort, or the "divide and conquer" method, recursively divides an input array into two halves before recursively sorting them and merging them back together to obtain the final array.
-- The best runtime complexity of Merge Sort is $O(n\log(n))$ when the array is sorted or nearly sorted.
-- The average and worst case is also $O(n\log(n))$ when the array is randomly or reverse ordered.
+- The best runtime complexity of Merge Sort is O(n log n) when the array is sorted or nearly sorted. 
+- The average and worst case is also O(n logn) when the array is randomly or reverse ordered. 
 
 </v-clicks>
 
@@ -313,59 +323,47 @@ class Main {
 layout: default
 ---
 
-<div class="grid grid-cols-[55%_40%] gap-6 text-[0.70rem] line-height-[1.15]">
+```java {monaco-run} {autorun:false}
 
-<div>
-
-```java
 class Main {
+    public static void main (String[] args) {
+        int[] arr = {15, 11, 22, 35, 16};
+        mergeSort(arr, 5);
+        System.out.println(java.util.Arrays.toString(arr));
+    } 
     public static void mergeSort(int[] a, int n) {
         if (n < 2) return;
         int mid = n / 2;
-        int[] left = new int[mid];
+        int[] left = new int[mid]; 
         int[] right = new int[n - mid];
-
         for (int i = 0; i < mid; i++) left[i] = a[i];
         for (int i = mid; i < n; i++) right[i - mid] = a[i];
-        
         mergeSort(left, mid);
         mergeSort(right, n - mid);
         merge(a, left, right, mid, n - mid);
     }
-
     public static void merge(int[] a, int[] left, int[] right, int leftLength, int rightLength) {
         int i = 0, j = 0, k = 0;
         while (i < leftLength && j < rightLength) {
-            if (left[i] <= right[j]) a[k++] = left[i++];
+            if (left[i] <= right[j]) a[k++] = left[i++]; 
             else a[k++] = right[j++];
-        }
+        } 
         while (i < leftLength) a[k++] = left[i++];
-        while (j < rightLength) a[k++] = right[j++];
-    }
-}
+        while (j < rightLength) a[k++] = right[j++]; } }
+
 ```
 
-</div>
+---
 
-<div>
+## Bar Graph Visualization
 
-```java {monaco-run} {autorun:false}
-class Main {
-    public static void main(String[] args) {
-        int[] arr = {15, 11, 22, 35, 16};
-        mergeSort(arr, 5);
-        System.out.println(java.util.Arrays.toString(arr));
-    }
+[![Selection Sort](https://youtu.be/92BfuxHn2XE?si=bugWMqPeydWaSPu3)](https://youtu.be/92BfuxHn2XE?si=bugWMqPeydWaSPu3)
+[![Insertion Sort](https://youtu.be/8oJS1BMKE64?si=3p2svD_zVKcrUqab
+)](https://youtu.be/8oJS1BMKE64?si=3p2svD_zVKcrUqab
+)
+[![Merge Sort](https://youtu.be/ZRPoEKHXTJg?si=QUbawooci1iltnMy)](https://youtu.be/ZRPoEKHXTJg?si=QUbawooci1iltnMy)
 
-    public static void mergeSort(int[] a, int n) {}
-}
-```
-
-</div>
-
-</div>
-
---- 
+---
 
 ## Break
 
@@ -377,9 +375,8 @@ Have a break!
 
 ## Packages
 
-<br>
-
 <v-clicks depth=3>
+<br>
 
 - Large programs can be split into separate files
   - Improves organization
@@ -418,8 +415,8 @@ public class Main { // Top-level public class.
         scan.close();
     }
 }
-```
 
+```
 ---
 
 ### Creating / Using Custom Packages
@@ -435,8 +432,6 @@ public class Main { // Top-level public class.
 
 </v-clicks>
 
----
-layout: two-cols-header
 ---
 
 #### Example 1 - Java <logos-java />
@@ -569,9 +564,9 @@ cowsay.cow("MOO") # Call a function from the package.
 
 ## Exceptions
 
-<br>
-
 <v-clicks depth=2>
+
+<br>
 
 - An **exception** is a type of event that disrupts the execution of a program
 - **Exceptions** are often used to indicate that a problem occurred in the program  
@@ -622,9 +617,9 @@ public class Main {
 
 ### Handling Exceptions
 
-<br>
-
 <v-clicks>
+
+<br>
 
 - By *handling* an exception, you are instructing the program to do something else instead of *terminating*
 - Put the code that can throw exception(s) inside a `try` block
